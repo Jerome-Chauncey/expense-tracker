@@ -18,7 +18,6 @@ function Form({ resetForm, onAddExpense }) {
     console.log("New Expense:", newExpense);
     onAddExpense(newExpense);
 
-
     setExpenseDescription("");
     setExpenseCategory("");
     setExpenseAmount("");
@@ -31,8 +30,8 @@ function Form({ resetForm, onAddExpense }) {
     console.log("Submit Button clicked");
   }
   return (
-    <section id="expense-form" className="card p-4 shadow-lg rounded-4">
-      <h2>Add Expense</h2>
+    <section id="expense-form" className="card p-4 shadow-sm rounded-4 mb-5">
+      <h5>Add Expense</h5>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="expense-description">
@@ -47,50 +46,56 @@ function Form({ resetForm, onAddExpense }) {
               placeholder="Enter expense description"
             />
           </label>
-          <label htmlFor="expense-category">
-            Expense Category
-            <input
-              type="text"
-              name="expense-category"
-              value={expenseCategory}
-              onChange={(e) => setExpenseCategory(e.target.value)}
-              className="form-control"
-              id="expense-category"
-              placeholder="Enter expense category"
-            />
-          </label>
-          <label htmlFor="expense-amount">
-            Expense Amount
-            <input
-              type="number"
-              name="expense-amount"
-              value={expenseAmount}
-              onChange={(e) => setExpenseAmount(e.target.value)}
-              className="form-control"
-              id="expense-amount"
-              placeholder="Enter expense amount"
-            />
-          </label>
-          <label htmlFor="expense-date">
-            Expense Date
-            <input
-              type="date"
-              name="expense-date"
-              value={expenseDate}
-              onChange={(e) => setExpenseDate(e.target.value)}
-              className="form-control"
-              id="expense-date"
-              placeholder="Enter expense date"
-            />
-          </label>
-          <button
-            type="submit"
-            className="btn btn-primary"
-            onClick={handleButtonClick}
-          >
-            SUBMIT
-          </button>
         </div>
+        <div className="mb-3">
+        <label htmlFor="expense-category">
+          Expense Category
+          <input
+            type="text"
+            name="expense-category"
+            value={expenseCategory}
+            onChange={(e) => setExpenseCategory(e.target.value)}
+            className="form-control"
+            id="expense-category"
+            placeholder="Enter expense category"
+          />
+        </label>
+        </div>
+        <div className="mb-3">
+        <label htmlFor="expense-amount">
+          Expense Amount
+          <input
+            type="number"
+            name="expense-amount"
+            value={expenseAmount}
+            onChange={(e) => setExpenseAmount(e.target.value)}
+            className="form-control"
+            id="expense-amount"
+            placeholder="Enter expense amount"
+          />
+        </label>
+        </div>
+        <div className="mb-3">
+        <label htmlFor="expense-date">
+          Expense Date
+          <input
+            type="date"
+            name="expense-date"
+            value={expenseDate}
+            onChange={(e) => setExpenseDate(e.target.value)}
+            className="form-control"
+            id="expense-date"
+            placeholder="Enter expense date"
+          />
+        </label>
+        </div>
+        <button
+          type="submit"
+          className="btn btn-primary w-100"
+          onClick={handleButtonClick}
+        >
+          Submit
+        </button>
       </form>
     </section>
   );

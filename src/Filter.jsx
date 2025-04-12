@@ -2,7 +2,7 @@ import React from "react";
 
 function Filter({ onSearchChange, search }) {
   return (
-    <div className="d-flex justify-content-between align-items-center mb-3">
+    <div className="mb-3">
       <input
         type="text"
         className="form-control"
