@@ -4,6 +4,7 @@ import Form from "./Form";
 import Table from "./Table";
 import expensesData from "./data/expensesData";
 import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
   const [expenses, setExpenses] = useState(expensesData);
@@ -28,6 +29,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
